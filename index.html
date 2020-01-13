@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+        body{
+            background-color: #f1f1f1;
+        }
+        .header{
+            width:100% ;
+            height: 10%;
+            padding: 0;
+        }
+        .logo{
+           width:30%;
+        }
+        .name{
+            width: 50%;
+            height: auto;
+            text-align:left;
+        }
+        .headnav{
+           width:20%;
+           height: auto;
+        }
+        .float{
+            float: left;
+        }
+        .floatright{
+            float: right;
+        }
+        .topnav {
+            overflow: hidden;
+            width: 100%;
+            background-color: gray;
+            clear: both;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color:blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: large;
+        }
+        .topnav a:hover {
+            background-color:whitesmoke;
+            color: black;
+        }
+        .row{
+            float: left;
+            width: 40%;
+        }
+        .add{
+            width: 100%;
+            height: 40%;
+            border-radius: 8%;
+        }
+        h2{
+            text-align: center;
+        }
+        .product{
+            float: left;
+            width: 50%;
+            padding: 2%;
+            margin-left: 2%;
+            border-radius: 5%;
+        }
+        .cart{
+           
+            width: 100%;
+        }
+        .item{
+            height: 20%;
+            border:1px solid red;
+            margin-bottom: 4%;
+
+        }
+        .image{
+            height:100%;
+            width: 25%;
+            float: left;
+        }
+        .productinfo{
+            float: left;
+            width: 35%;
+            height: 50%;
+        }
+        .quantityinfo{
+            float:right;
+            width: 35%;
+            height: 50%;
+        }
+        .btnaddtocart{
+            float: none;
+            width: 40%;
+            height: 25%;
+            vertical-align: bottom;
+            
+        }
+        .first,.second input{
+            width: 50%;    
+            float: left;
+            height: 12%;
+        }
+        .first,.second label{
+            width: 40%;    
+            float: left;
+            height: 12%;
+            font-size: large;
+        }
+        .first,.second button{
+            width: 40%;    
+            float: left;
+            height: 12%;
+            font-size: large;
+        }
+        .first{
+            text-align: right; 
+            }
+        .second{
+            text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo float"><img src="logo.png" style="width: auto;"></div>
+            <div class="name float"><H1>E Commerce Site</H1></div>
+        </div>
+        <div class="topnav">
+            <a href="#">Menu</a>
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+          </div>
+          <div class="row">
+              
+            <div class="add" style="background-color:#aaa;">
+              <h2>Add Product</h2>
+              <div class="first"><label for="email">Product Name:</label>
+              </div>
+              <div class="second"><input type="text" maxlength="50" name="email"  />
+              </div>
+              <div class="first"><label for="email">Product Image:</label>
+              </div>
+              <div class="second"><input type="text" maxlength="50" name="email"  />
+              </div>
+              <div class="first"><label for="email">Product Description:</label>
+              </div>
+              <div class="second"><input type="text" maxlength="50" name="email"  />
+              </div>
+              <div class="first"><label for="email">Product Quantity:</label>
+              </div>
+              <div class="second"><input type="text" maxlength="50" name="email"  />
+              </div>
+              <div class="first"><label for="email">Product Price:</label>
+              </div>
+              <div class="second"><input type="text" maxlength="50" name="email"  />
+              </div>
+              <div class="first"><button style="text-align: center;">ewf</button>
+              </div>
+              <div class="second"><button style="text-align: center;">ewf</button>
+              </div>
+            </div>
+            <br>
+           
+            <div class="cart" style="background-color:#ccc;">
+                <h2>Cart</h2>
+                <p>Some text..</p>
+                <p>Some text..</p>
+                <p>Some text..</p>
+                <p>Some text..</p>
+            </div>
+           
+            </div>
+            <div class="product" style="background-color:#bbb;">
+                <h2>Product List</h2>
+
+                <!-- product tags starts above -->
+                <div class="item">
+                  <img class="image" src="Screenshot (1).png" >
+                  <div class="productinfo">
+                  <div>Product Name</div>
+                  <div><p>Product Description
+                      Second Line
+                  </p></div></div>
+                  <div class="quantityinfo">
+                    <div>Price</div>
+                    <div><p>Available Quanity
+                    </p></div></div>
+                    
+                    <button class="btnaddtocart">Add To Cart</button>
+                </div>
+                
+            <!-- product tags ends below -->
+            </div>
+    </body>
+</html>
