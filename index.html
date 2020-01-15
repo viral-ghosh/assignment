@@ -51,11 +51,7 @@
             float: left;
             width: 40%;
         }
-        .add{
-            width: 100%;
-            height: 40%;
-            border-radius: 8%;
-        }
+        
         h2{
             text-align: center;
         }
@@ -66,9 +62,10 @@
             margin-left: 2%;
             border-radius: 5%;
         }
-        .cart{
-           
-            width: 100%;
+        .cartitem{
+            height: 20%;
+            border:1px solid red;
+            margin-bottom: 4%;
         }
         .item{
             height: 20%;
@@ -82,44 +79,73 @@
             float: left;
         }
         .productinfo{
+            margin-left: 2%;
             float: left;
             width: 35%;
-            height: 50%;
+            height: 100%;
         }
         .quantityinfo{
             float:right;
-            width: 35%;
-            height: 50%;
+            width: 30%;
+            height: 73%;
         }
         .btnaddtocart{
             float: none;
-            width: 40%;
+            margin-left: 7%;
+            width: 30%;
             height: 25%;
             vertical-align: bottom;
             
         }
-        .first,.second input{
-            width: 50%;    
+        .cartinfo{
             float: left;
-            height: 12%;
+            width: 60%;
+            height: 50%;
+            margin-bottom: 5%;
         }
-        .first,.second label{
-            width: 40%;    
-            float: left;
-            height: 12%;
+        .cartinfo *{
+            margin-bottom: 2%;
+            margin-left: 5%;
             font-size: large;
         }
-        .first,.second button{
+        .cartitemtotal{
+            font-size: xx-large;
+        }
+        .add{
+            width: 100%;
+            height: 40%;
+            border-radius: 8%;
+        }
+        .first label,.second input{
+            height: 100%;
+            font-size: large;
+            width: 130%;
+            font-weight: bold;
+        }
+        .first,.second{
             width: 40%;    
             float: left;
-            height: 12%;
+            height: 10%;
             font-size: large;
+            margin: 3px;
+        }
+        .first button,.second button{
+            width: 70%;
+            height: 100%;
+            border-radius: 50%;
+            float: right;
         }
         .first{
             text-align: right; 
             }
         .second{
             text-align: left;
+            }
+            .total{
+                margin-right: 5%;
+                text-align: right;
+                font-size: xx-large;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -157,19 +183,56 @@
               </div>
               <div class="second"><input type="text" maxlength="50" name="email"  />
               </div>
-              <div class="first"><button style="text-align: center;">ewf</button>
+              <div class="first"><button style="text-align: center;">Reset</button>
               </div>
-              <div class="second"><button style="text-align: center;">ewf</button>
+              <div class="second"><button style="text-align: center;">Add Product</button>
               </div>
             </div>
             <br>
            
             <div class="cart" style="background-color:#ccc;">
+                <!-- Cart div starts above -->
                 <h2>Cart</h2>
-                <p>Some text..</p>
-                <p>Some text..</p>
-                <p>Some text..</p>
-                <p>Some text..</p>
+                <div class="cartitem">
+                    <img class="image" src="Screenshot (1).png" >
+                    <div class="cartinfo">
+                    <div>Product Name</div>
+                    <div>Product Price</div>
+                   <div> Qty:- <input type="text" name="qty" /></div>
+                    <div>
+                    <button class="cartdelete">Delete</button>
+                    <button class="cartdelete">Update</button></div>
+                   </div>
+                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
+                  </div>
+                  <div class="cartitem">
+                    <img class="image" src="Screenshot (1).png" >
+                    <div class="cartinfo">
+                    <div>Product Name</div>
+                    <div>Product Price</div>
+                   <div> Qty:- <input type="text" name="qty" /></div>
+                    <div>
+                    <button class="cartdelete">Delete</button>
+                    <button class="cartdelete">Update</button></div>
+                   </div>
+                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
+                  </div>
+                  <div class="cartitem">
+                    <img class="image" src="Screenshot (1).png" >
+                    <div class="cartinfo">
+                    <div>Product Name</div>
+                    <div>Product Price</div>
+                   <div> Qty:- <input type="text" name="qty" /></div>
+                    <div>
+                    <button class="cartdelete">Delete</button>
+                    <button class="cartdelete">Update</button></div>
+                   </div>
+                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
+                  </div>
+                  <div class="total">
+                      Total 20$
+                  </div>
+            <!-- Cart div ends below -->
             </div>
            
             </div>
@@ -191,7 +254,7 @@
                     
                     <button class="btnaddtocart">Add To Cart</button>
                 </div>
-                
+                 
             <!-- product tags ends below -->
             </div>
     </body>
