@@ -185,7 +185,7 @@
               </div>
               <div class="first"><button style="text-align: center;">Reset</button>
               </div>
-              <div class="second"><button style="text-align: center;">Add Product</button>
+              <div class="second"><button style="text-align: center;" onclick="addProduct()">Add Product</button>
               </div>
             </div>
             <br>
@@ -236,7 +236,7 @@
             </div>
            
             </div>
-            <div class="product" style="background-color:#bbb;">
+            <div id="product" class="product" style="background-color:#bbb;">
                 <h2>Product List</h2>
 
                 <!-- product tags starts above -->
@@ -257,5 +257,31 @@
                  
             <!-- product tags ends below -->
             </div>
+            <script>
+                var x=1;
+                function addProduct(){
+                    var div = document.createElement('div');
+                    var button = document.createElement('button');
+                    button.innerHTML="add test";
+                    button.classList.add("btnaddtocart");  
+                    x++;
+                    //button.id=x;
+                    button.onclick=addcart;
+                    div.append(button);
+                    document.getElementById('product').append(div);
+                }
+                function addcart(){
+                    var div = document.createElement('div');
+                    var button = document.createElement('button');
+                    button.innerHTML="add test pressed"; 
+                    x++;
+                    button.id=x;
+                    button.onclick=addProduct;
+                    div.append(button);
+
+                    document.getElementById('product').append(div);
+                }
+              </script>
     </body>
+
 </html>

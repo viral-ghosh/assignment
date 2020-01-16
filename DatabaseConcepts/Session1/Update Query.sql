@@ -1,0 +1,1 @@
+UPDATE logintbl set password='bbbb' WHERE username='Priyank'
