@@ -1,1 +1,1 @@
-delete from loginTbl WHERE id=2
+DELETE FROM loginTbl WHERE id=2

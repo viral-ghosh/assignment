@@ -1,287 +1,427 @@
 <html>
-    <head>
-        <title></title>
-        <style>
-        body{
+
+<head>
+    <title></title>
+    <style>
+        body {
             background-color: #f1f1f1;
         }
-        .header{
-            width:100% ;
+
+        .header {
+            width: 100%;
             height: 10%;
             padding: 0;
         }
-        .logo{
-           width:30%;
+
+        .logo {
+            width: 30%;
         }
-        .name{
+
+        .name {
             width: 50%;
             height: auto;
-            text-align:left;
+            text-align: left;
         }
-        .headnav{
-           width:20%;
-           height: auto;
+
+        .headnav {
+            width: 20%;
+            height: auto;
         }
-        .float{
+
+        .float {
             float: left;
         }
-        .floatright{
+
+        .floatright {
             float: right;
         }
+
         .topnav {
             overflow: hidden;
             width: 100%;
             background-color: gray;
             clear: both;
         }
+
         .topnav a {
             float: left;
             display: block;
-            color:blue;
+            color: blue;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             font-size: large;
         }
+
         .topnav a:hover {
-            background-color:whitesmoke;
+            background-color: whitesmoke;
             color: black;
         }
-        .row{
+
+        .row {
             float: left;
             width: 40%;
         }
-        
-        h2{
+
+        h2 {
             text-align: center;
         }
-        .product{
+
+        .product {
             float: left;
             width: 50%;
             padding: 2%;
             margin-left: 2%;
             border-radius: 5%;
+            font-size: x-large;
         }
-        .cartitem{
-            height: 20%;
-            border:1px solid red;
-            margin-bottom: 4%;
-        }
-        .item{
-            height: 20%;
-            border:1px solid red;
-            margin-bottom: 4%;
 
+        .cartitem {
+            height: 20%;
+            margin-bottom: 4%;
         }
-        .image{
-            height:100%;
+
+        .item {
+            height: 20%;
+            margin-bottom: 4%;
+            border-radius: 8%;
+        }
+
+        .image {
+            height: 100%;
             width: 25%;
             float: left;
+            border: 1px solid black;
         }
-        .productinfo{
+
+        .productinfo {
             margin-left: 2%;
             float: left;
             width: 35%;
             height: 100%;
         }
-        .quantityinfo{
-            float:right;
+
+        .quantityinfo {
+            float: right;
             width: 30%;
-            height: 73%;
+            height: 80%;
+            text-align: right;
+            margin-right: 10px;
         }
-        .btnaddtocart{
+
+        .btnaddtocart {
             float: none;
             margin-left: 7%;
             width: 30%;
             height: 25%;
             vertical-align: bottom;
-            
+
         }
-        .cartinfo{
+
+        .cartinfo {
             float: left;
             width: 60%;
             height: 50%;
             margin-bottom: 5%;
+            font-size: x-large;
         }
-        .cartinfo *{
+
+        .cartinfo * {
             margin-bottom: 2%;
             margin-left: 5%;
             font-size: large;
         }
-        .cartitemtotal{
+
+        .cartitemtotal {
             font-size: xx-large;
+            height: 100%;
         }
-        .add{
+
+        .add {
             width: 100%;
             height: 40%;
             border-radius: 8%;
         }
-        .first label,.second input{
+
+        .first label,
+        .second input {
             height: 100%;
             font-size: large;
             width: 130%;
             font-weight: bold;
         }
-        .first,.second{
-            width: 40%;    
+
+        .first,
+        .second {
+            width: 40%;
             float: left;
             height: 10%;
             font-size: large;
             margin: 3px;
         }
-        .first button,.second button{
+
+        .first button,
+        .second button {
             width: 70%;
             height: 100%;
             border-radius: 50%;
             float: right;
         }
-        .first{
-            text-align: right; 
-            }
-        .second{
+
+        .first {
+            text-align: right;
+        }
+
+        .second {
             text-align: left;
-            }
-            .total{
-                margin-right: 5%;
-                text-align: right;
-                font-size: xx-large;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <div class="logo float"><img src="logo.png" style="width: auto;"></div>
-            <div class="name float"><H1>E Commerce Site</H1></div>
+        }
+
+        .total {
+            margin-right: 5%;
+            text-align: right;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo float"><img src="logo.png" style="width: auto;"></div>
+        <div class="name float">
+            <H1>E Commerce Site</H1>
         </div>
-        <div class="topnav">
-            <a href="#">Menu</a>
-            <a href="#">Register</a>
-            <a href="#">Login</a>
-          </div>
-          <div class="row">
-              
-            <div class="add" style="background-color:#aaa;">
-              <h2>Add Product</h2>
-              <div class="first"><label for="email">Product Name:</label>
-              </div>
-              <div class="second"><input type="text" maxlength="50" name="email"  />
-              </div>
-              <div class="first"><label for="email">Product Image:</label>
-              </div>
-              <div class="second"><input type="text" maxlength="50" name="email"  />
-              </div>
-              <div class="first"><label for="email">Product Description:</label>
-              </div>
-              <div class="second"><input type="text" maxlength="50" name="email"  />
-              </div>
-              <div class="first"><label for="email">Product Quantity:</label>
-              </div>
-              <div class="second"><input type="text" maxlength="50" name="email"  />
-              </div>
-              <div class="first"><label for="email">Product Price:</label>
-              </div>
-              <div class="second"><input type="text" maxlength="50" name="email"  />
-              </div>
-              <div class="first"><button style="text-align: center;">Reset</button>
-              </div>
-              <div class="second"><button style="text-align: center;" onclick="addProduct()">Add Product</button>
-              </div>
-            </div>
-            <br>
-           
-            <div class="cart" style="background-color:#ccc;">
-                <!-- Cart div starts above -->
-                <h2>Cart</h2>
-                <div class="cartitem">
-                    <img class="image" src="Screenshot (1).png" >
-                    <div class="cartinfo">
-                    <div>Product Name</div>
-                    <div>Product Price</div>
-                   <div> Qty:- <input type="text" name="qty" /></div>
-                    <div>
-                    <button class="cartdelete">Delete</button>
-                    <button class="cartdelete">Update</button></div>
-                   </div>
-                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
-                  </div>
-                  <div class="cartitem">
-                    <img class="image" src="Screenshot (1).png" >
-                    <div class="cartinfo">
-                    <div>Product Name</div>
-                    <div>Product Price</div>
-                   <div> Qty:- <input type="text" name="qty" /></div>
-                    <div>
-                    <button class="cartdelete">Delete</button>
-                    <button class="cartdelete">Update</button></div>
-                   </div>
-                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
-                  </div>
-                  <div class="cartitem">
-                    <img class="image" src="Screenshot (1).png" >
-                    <div class="cartinfo">
-                    <div>Product Name</div>
-                    <div>Product Price</div>
-                   <div> Qty:- <input type="text" name="qty" /></div>
-                    <div>
-                    <button class="cartdelete">Delete</button>
-                    <button class="cartdelete">Update</button></div>
-                   </div>
-                   <div class="cartitemtotal"><label class="total">20$</label></div>                    
-                  </div>
-                  <div class="total">
-                      Total 20$
-                  </div>
-            <!-- Cart div ends below -->
-            </div>
-           
-            </div>
-            <div id="product" class="product" style="background-color:#bbb;">
-                <h2>Product List</h2>
+    </div>
+    <div class="topnav">
+        <a href="#">Menu</a>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+    </div>
+    <div class="row">
 
-                <!-- product tags starts above -->
-                <div class="item">
-                  <img class="image" src="Screenshot (1).png" >
-                  <div class="productinfo">
-                  <div>Product Name</div>
-                  <div><p>Product Description
-                      Second Line
-                  </p></div></div>
-                  <div class="quantityinfo">
-                    <div>Price</div>
-                    <div><p>Available Quanity
-                    </p></div></div>
-                    
-                    <button class="btnaddtocart">Add To Cart</button>
+        <div class="add" style="background-color:#aaa;">
+            <form>
+                <h2>Add Product</h2>
+                <div class="first"><label for="email">Product Name:</label>
                 </div>
-                 
-            <!-- product tags ends below -->
-            </div>
-            <script>
-                var x=1;
-                function addProduct(){
-                    var div = document.createElement('div');
-                    var button = document.createElement('button');
-                    button.innerHTML="add test";
-                    button.classList.add("btnaddtocart");  
-                    x++;
-                    //button.id=x;
-                    button.onclick=addcart;
-                    div.append(button);
-                    document.getElementById('product').append(div);
-                }
-                function addcart(){
-                    var div = document.createElement('div');
-                    var button = document.createElement('button');
-                    button.innerHTML="add test pressed"; 
-                    x++;
-                    button.id=x;
-                    button.onclick=addProduct;
-                    div.append(button);
+                <div class="second"><input type="text" value="Demo" id="productName" />
+                </div>
+                <div class="first"><label for="email">Product Image:</label>
+                </div>
+                <div class="second"><input type="file" name="image" id="productImage">
+                </div>
+                <div class="first"><label for="email">Product Description:</label>
+                </div>
+                <div class="second"><input type="text" value="Faltu description" id="productDesc" />
+                </div>
+                <div class="first"><label for="email">Product Quantity:</label>
+                </div>
+                <div class="second"><input type="number" value="5" id="productQty" />
+                </div>
+                <div class="first"><label for="email">Product Price:</label>
+                </div>
+                <div class="second"><input type="number" value="5" id="productPrice" />
+                </div>
+                <div class="first"><button style="text-align: center;" type="reset">Reset</button>
+                </div>
+                <div class="second"><button style="text-align: center;" onclick="addProduct()" type="button">Add
+                        Product</button>
+                </div>
+            </form>
+        </div>
+        <br>
 
+        <div id="cart" class="cart" style="background-color:#ccc;">
+            <h2>Cart</h2>
+            <hr>
+            <!-- Cart div starts above -->
+            <!-- <div class="cartitem">
+                <img class="image" src="Screenshot (1).png">
+                <div class="cartinfo">
+                    <div>Product Name</div>
+                    <div>Product Price</div>
+                    <div> Qty:- <input type="text" id="cartqty" /></div>
+                    <div>
+                        <button>Delete</button>
+                        <button>Update</button>
+                    </div>
+                </div>
+                <div class="cartitemtotal">20$</div>
+            </div> -->
+            <!-- Cart div ends below -->
+
+
+        </div>
+        <div class="total" id="total">
+        </div>
+    </div>
+    <div id="product" class="product" style="background-color:#bbb;">
+        <h2>Product List</h2>
+<hr>
+        <!-- product tags starts above -->
+        <!-- <div class="item">
+            <img class="image" src="Screenshot (1).png">
+            <div class="productinfo">
+                <p>Product Name</p>
+                <p>Product Description Second Line</p>
+            </div>
+            <div class="quantityinfo">
+                <p>Price</p>
+                <p>Available Quanity</p>
+            </div>
+            <button class="btnaddtocart">Add To Cart</button>
+        </div> -->
+
+        <!-- product tags ends below -->
+    </div>
+    <script>
+        var x = 0;
+        var cart = [];
+        var cartTotal = 0;
+        var hr = document.createElement("hr");
+        function addProduct() {
+            let files = document.getElementById("productImage").files
+            if (files && files.length) {
+                var fr = new FileReader();
+                fr.onload = function () {
+                    x++;
+                    var div = document.createElement('div');
+                    var img = document.createElement('img');
+                    var infoDiv = document.createElement('div');
+                    var qtyDiv = document.createElement('div');
+                    var button = document.createElement('button');
+                    var productName = document.createElement('p');
+                    var productDesc = document.createElement('p');
+                    var productPrice = document.createElement('p');
+                    var productQty = document.createElement('p');
+                    productName.id = "name" + x;
+                    productDesc.id = "desc" + x;
+                    productPrice.id = "price" + x;
+                    productQty.id = "qty" + x;
+                    img.id = "img" + x;
+                    button.id = x;
+                    productName.innerHTML = document.getElementById("productName").value;
+                    productDesc.innerHTML = document.getElementById("productDesc").value;
+                    productPrice.innerHTML = document.getElementById("productPrice").value+"$";
+                    productQty.innerHTML = document.getElementById("productQty").value+" Qty";
+                    button.innerHTML = "Add To Cart";
+                    div.classList.add("item");
+                    img.src = fr.result;
+                    img.classList.add("image");
+                    button.classList.add("btnaddtocart");
+                    infoDiv.classList.add("productinfo");
+                    qtyDiv.classList.add("quantityinfo");
+                    // button.addEventListener("click", addcart);
+                    button.onclick = function () {
+                        addcart(this.id);
+                    }
+                    div.append(img);
+                    infoDiv.append(productName);
+                    infoDiv.append(productDesc);
+                    div.append(infoDiv);
+                    qtyDiv.append(productPrice);
+                    qtyDiv.append(productQty);
+                    div.append(qtyDiv);
+                    div.append(button);
                     document.getElementById('product').append(div);
+                    var hr = document.createElement("hr");
+                    div.append(hr);
                 }
-              </script>
-    </body>
+                fr.readAsDataURL(files[0]);
+            }
+        }
+        function addcart(x) {
+            if (cart.indexOf(x) > -1) {
+                var productQty = document.getElementById("qty" + x).innerHTML;
+                var qty = parseFloat(productQty);
+                if (qty > 0) {
+                    document.getElementById("qty" + x).innerHTML = qty - 1+" Qty";
+                    var productPrice = document.getElementById("price" + x).innerHTML;
+                    var total = document.getElementById("total" + x).innerHTML;
+                    var newtotal = parseFloat(total) + parseFloat(productPrice);
+                    cartTotal+=parseFloat(productPrice);
+                    document.getElementById("total" + x).innerHTML = newtotal+"$";
+                    document.getElementById("cartqty" + x).value = newtotal / parseFloat(productPrice);
+                    document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
+                } else {
+                    alert("Sorry Product Out of stock");
+                }
+            } else {
+                cart.push(x);
+                var productName = document.getElementById("name" + x).innerHTML;
+                var productPrice = document.getElementById("price" + x).innerHTML;
+                var productQty = document.getElementById("qty" + x).innerHTML;
+                document.getElementById("qty" + x).innerHTML = parseFloat(productQty) - 1+" Qty";
+                var image = document.getElementById("img" + x).src
+                var div = document.createElement('div');
+                var totalDiv = document.createElement('div');
+                var img = document.createElement('img');
+                var infoDiv = document.createElement('div');
+                var nameDiv = document.createElement('div');
+                var priceDiv = document.createElement('div');
+                var qtyDiv = document.createElement('div');
+                var btnDiv = document.createElement('div');
+                var delButton = document.createElement('button');
+                var updButton = document.createElement('button');
+                var input = document.createElement('input');
+                div.classList.add("cartitem");
+                img.classList.add("image");
+                infoDiv.classList.add("cartinfo");
+                totalDiv.classList.add("cartitemtotal");
+                input.id = "cartqty" + x;
+                totalDiv.id = "total" + x;
+                delButton.id = "remove" + x;
+                div.id = "remove" + x + "delete";
+                nameDiv.innerHTML = productName;
+                priceDiv.innerHTML = productPrice;
+
+                delButton.innerHTML = "Delete";
+                delButton.onclick = function () {
+                    removeElement(this.id);
+                }
+                updButton.innerHTML = "Update";
+                totalDiv.innerHTML = productPrice;
+                qtyDiv.innerHTML = "QTY:-";
+                input.value = "1";
+                img.src = image;
+                div.append(img);
+                infoDiv.append(nameDiv);
+                infoDiv.append(priceDiv);
+                infoDiv.append(qtyDiv);
+                btnDiv.append(delButton);
+                qtyDiv.append(input);
+                infoDiv.append(btnDiv);
+                div.append(infoDiv);
+                div.append(totalDiv);
+                document.getElementById('cart').append(div);
+                cartTotal += parseFloat(productPrice);
+                document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
+                var hr = document.createElement("hr");
+                    div.append(hr);
+            }
+        }
+        function removeElement(elementId) {
+            var id = elementId;
+            id = id.substring(6);
+            cart = arrayRemove(cart, id);
+            var qty = document.getElementById("qty"+id).innerHTML;
+            var cartqty = document.getElementById("cartqty"+id).value;
+            document.getElementById("qty"+id).innerHTML= parseFloat(cartqty)+parseFloat(qty)+" Qty";
+            var itemTotal=document.getElementById("total"+id).innerHTML;
+           cartTotal =cartTotal-parseFloat(itemTotal);
+           document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
+            var element = document.getElementById(elementId + "delete");
+            element.parentNode.removeChild(element);
+
+        }
+        function arrayRemove(arr, value) {
+
+            return arr.filter(function (ele) {
+                return ele != value;
+            });
+
+        }
+    </script>
+</body>
 
 </html>
