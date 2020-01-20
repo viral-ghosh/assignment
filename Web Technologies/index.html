@@ -58,20 +58,21 @@
             color: black;
         }
 
-        .row {
+        .row{
             float: left;
             width: 40%;
         }
-
+        .cart,.add{
+            border: 1px solid black;
+        }
         h2 {
             text-align: center;
         }
 
         .product {
             float: left;
-            width: 50%;
-            padding: 2%;
-            margin-left: 2%;
+            width: 55%;
+            margin-left: 2.5%;
             border-radius: 5%;
             font-size: x-large;
         }
@@ -91,7 +92,7 @@
             height: 100%;
             width: 25%;
             float: left;
-            border: 1px solid black;
+            border: 1px thin black;
         }
 
         .productinfo {
@@ -104,7 +105,7 @@
         .quantityinfo {
             float: right;
             width: 30%;
-            height: 80%;
+            height: 89%;
             text-align: right;
             margin-right: 10px;
         }
@@ -139,7 +140,7 @@
 
         .add {
             width: 100%;
-            height: 40%;
+            height: 44%;
             border-radius: 8%;
         }
 
@@ -204,7 +205,7 @@
                 <h2>Add Product</h2>
                 <div class="first"><label for="email">Product Name:</label>
                 </div>
-                <div class="second"><input type="text" id="productName" />
+                <div class="second"><input type="text" maxlength="15" id="productName" />
                 </div>
                 <div class="first"><label for="email">Product Image:</label>
                 </div>
@@ -212,11 +213,11 @@
                 </div>
                 <div class="first"><label for="email">Product Description:</label>
                 </div>
-                <div class="second"><input type="text" id="productDesc" />
+                <div class="second"><input type="text" maxlength="50" id="productDesc" />
                 </div>
                 <div class="first"><label for="email">Product Quantity:</label>
                 </div>
-                <div class="second"><input type="number" id="productQty" />
+                <div class="second"><input type="number"  id="productQty" />
                 </div>
                 <div class="first"><label for="email">Product Price:</label>
                 </div>
@@ -231,7 +232,7 @@
         </div>
         <br>
 
-        <div id="cart" class="cart" style="background-color:#ccc;">
+        <div id="cart" class="cart">
             <h2>Cart</h2>
             <hr>
             <!-- Cart div starts above -->
