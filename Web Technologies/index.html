@@ -13,7 +13,7 @@
             padding: 0;
         }
 
-        .logo { 
+        .logo {
             width: 30%;
         }
 
@@ -58,13 +58,16 @@
             color: black;
         }
 
-        .row{
+        .row {
             float: left;
             width: 40%;
         }
-        .cart,.add{
+
+        .cart,
+        .add {
             border: 1px solid black;
         }
+
         h2 {
             text-align: center;
         }
@@ -205,7 +208,8 @@
                 <h2>Add Product</h2>
                 <div class="first"><label for="email">Product Name:</label>
                 </div>
-                <div class="second"><input type="text" maxlength="15" id="productName" />
+                <div class="second"><input type="text" maxlength="15" onkeypress="return isCharKey(event)"
+                        id="productName" />
                 </div>
                 <div class="first"><label for="email">Product Image:</label>
                 </div>
@@ -213,15 +217,16 @@
                 </div>
                 <div class="first"><label for="email">Product Description:</label>
                 </div>
-                <div class="second"><input type="text" maxlength="50" id="productDesc" />
+                <div class="second"><input type="text" maxlength="50" onkeypress="return isCharKey(event)"
+                        id="productDesc" />
                 </div>
                 <div class="first"><label for="email">Product Quantity:</label>
                 </div>
-                <div class="second"><input type="number"  id="productQty" />
+                <div class="second"><input type="number" onkeypress="return isNumberKey(event)" id="productQty" />
                 </div>
                 <div class="first"><label for="email">Product Price:</label>
                 </div>
-                <div class="second"><input type="number" id="productPrice" />
+                <div class="second"><input type="number" id="productPrice" onkeypress="return isNumberKey(event)" />
                 </div>
                 <div class="first"><button style="text-align: center;" type="reset">Reset</button>
                 </div>
@@ -258,7 +263,7 @@
     </div>
     <div id="product" class="product">
         <h2>Product List</h2>
-<hr>
+        <hr>
         <!-- product tags starts above -->
         <!-- <div class="item">
             <img class="image" src="Screenshot (1).png">
@@ -303,8 +308,8 @@
                     button.id = x;
                     productName.innerHTML = document.getElementById("productName").value;
                     productDesc.innerHTML = document.getElementById("productDesc").value;
-                    productPrice.innerHTML = document.getElementById("productPrice").value+"$";
-                    productQty.innerHTML = document.getElementById("productQty").value+" Qty";
+                    productPrice.innerHTML = document.getElementById("productPrice").value + "$";
+                    productQty.innerHTML = document.getElementById("productQty").value + " Qty";
                     button.innerHTML = "Add To Cart";
                     div.classList.add("item");
                     img.src = fr.result;
@@ -336,12 +341,12 @@
                 var productQty = document.getElementById("qty" + x).innerHTML;
                 var qty = parseFloat(productQty);
                 if (qty > 0) {
-                    document.getElementById("qty" + x).innerHTML = qty - 1+" Qty";
+                    document.getElementById("qty" + x).innerHTML = qty - 1 + " Qty";
                     var productPrice = document.getElementById("price" + x).innerHTML;
                     var total = document.getElementById("total" + x).innerHTML;
                     var newtotal = parseFloat(total) + parseFloat(productPrice);
-                    cartTotal+=parseFloat(productPrice);
-                    document.getElementById("total" + x).innerHTML = newtotal+"$";
+                    cartTotal += parseFloat(productPrice);
+                    document.getElementById("total" + x).innerHTML = newtotal + "$";
                     document.getElementById("cartqty" + x).value = newtotal / parseFloat(productPrice);
                     document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
                 } else {
@@ -352,7 +357,7 @@
                 var productName = document.getElementById("name" + x).innerHTML;
                 var productPrice = document.getElementById("price" + x).innerHTML;
                 var productQty = document.getElementById("qty" + x).innerHTML;
-                document.getElementById("qty" + x).innerHTML = parseFloat(productQty) - 1+" Qty";
+                document.getElementById("qty" + x).innerHTML = parseFloat(productQty) - 1 + " Qty";
                 var image = document.getElementById("img" + x).src
                 var div = document.createElement('div');
                 var totalDiv = document.createElement('div');
@@ -398,19 +403,19 @@
                 cartTotal += parseFloat(productPrice);
                 document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
                 var hr = document.createElement("hr");
-                    div.append(hr);
+                div.append(hr);
             }
         }
         function removeElement(elementId) {
             var id = elementId;
             id = id.substring(6);
             cart = arrayRemove(cart, id);
-            var qty = document.getElementById("qty"+id).innerHTML;
-            var cartqty = document.getElementById("cartqty"+id).value;
-            document.getElementById("qty"+id).innerHTML= parseFloat(cartqty)+parseFloat(qty)+" Qty";
-            var itemTotal=document.getElementById("total"+id).innerHTML;
-           cartTotal =cartTotal-parseFloat(itemTotal);
-           document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
+            var qty = document.getElementById("qty" + id).innerHTML;
+            var cartqty = document.getElementById("cartqty" + id).value;
+            document.getElementById("qty" + id).innerHTML = parseFloat(cartqty) + parseFloat(qty) + " Qty";
+            var itemTotal = document.getElementById("total" + id).innerHTML;
+            cartTotal = cartTotal - parseFloat(itemTotal);
+            document.getElementById('total').innerHTML = "Total " + cartTotal + "$";
             var element = document.getElementById(elementId + "delete");
             element.parentNode.removeChild(element);
 
@@ -422,6 +427,22 @@
             });
 
         }
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode < 48 || charCode > 57)
+                return false;
+
+            return true;
+        }
+        function isCharKey(evt) {
+            var regex = new RegExp("^[a-zA-Z ]+$");
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if (!regex.test(key)) {
+                event.preventDefault();
+                return false;
+            }
+        }
+
     </script>
 </body>
 
